@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokemon</title>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <script defer src="index.js"></script>
     <script
       src="https://kit.fontawesome.com/33938235e4.js"
@@ -17,14 +17,38 @@
     <button onclick="fetchData()">Fetch Pokemon</button>
     <img src="" alt="Pokemon Sprite" id="pokemonSprite" style="display: none" />
 
-    <div class="wrapper">
-      <nav>
+    <nav>
+      <div class="wrapper">
         <img class="logo" src="./assests/pokedex_logo.png" alt="pokedex_logo" />
         <div class="search-bar">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input id="search" type="text" placeholder="Find Pokemon..." />
+          <input
+            id="Search"
+            name="Search"
+            type="search"
+            placeholder="Search Pokemon..."
+          />
+          <button id="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
+    <!-- <section>
+      <div class="card">
+        <div class="main-info">
+          <img src="" alt="" />
+          <p>pokemonName</p>
+          <p>pokemon number</p>
+        </div>
+      </div>
+    </section> -->
+    <video
+      src="/assests/bg-video.mp4"
+      class="video-background"
+      alt="video-background"
+      autoplay
+      muted
+      loop
+    ></video>
   </body>
 </html>
