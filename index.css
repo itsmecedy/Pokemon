@@ -1,0 +1,73 @@
+@import url("https://fonts.cdnfonts.com/css/pokemon-solid");
+@font-face {
+  font-family: "PKMN RBYGSC";
+  src: url("./font/PKMN\ RBYGSC.ttf");
+}
+* {
+  margin: 0;
+  font-family: "PKMN RBYGSC", sans-serif;
+  animation-duration: 1000ms;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-y: scroll; /* Always show vertical scrollbar */
+  background-color: skyblue;
+  height: 100vh;
+  width: 100%;
+}
+/* scroll effect */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: red;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  height: 6rem;
+}
+.search-bar {
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: large;
+}
+
+.search-bar input {
+  outline: none;
+  border: none;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+#search::-webkit-search-cancel-button {
+  position: relative;
+  right: 20px;
+}
