@@ -16,18 +16,24 @@ body {
   width: 100%;
 }
 body section {
-  width: 50%;
+  max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
   background-color: #f1f1f1;
+}
+body section .container {
+  border: 1px solid red;
   display: flex;
-  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
 }
-body section .card {
-  margin: 5rem;
+body section .container .card {
   border: 1px solid red;
+  flex: 1;
 }
-body section .right-side {
+body section .container .right-side {
   border: 1px solid red;
+  flex: 1;
 }
 body .video-background {
   position: absolute;
