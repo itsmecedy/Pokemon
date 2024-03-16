@@ -24,16 +24,17 @@ body section {
 body section .container {
   border: 1px solid red;
   display: flex;
+  justify-content: space-between;
   max-width: 800px;
   margin: 0 auto;
 }
-body section .container .card {
-  border: 1px solid red;
+body section .container .main-info {
   flex: 1;
+  border: 1px solid red;
 }
 body section .container .right-side {
-  border: 1px solid red;
   flex: 1;
+  border: 1px solid red;
 }
 body .video-background {
   position: absolute;

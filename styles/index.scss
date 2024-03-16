@@ -21,16 +21,16 @@ body {
     .container {
       border: 1px solid red;
       display: flex;
+      justify-content: space-between;
       max-width: 800px;
       margin: 0 auto;
-      .card {
-        border: 1px solid red;
+      .main-info {
         flex: 1;
+        border: 1px solid red;
       }
       .right-side {
-        border: 1px solid red;
         flex: 1;
-
+        border: 1px solid red;
       }
     }
   }
