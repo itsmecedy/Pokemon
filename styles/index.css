@@ -126,13 +126,16 @@ nav .wrapper .search-bar #search-button :hover {
   gap: 1rem;
 }
 .container .wrapper .card .left-info {
-  border: solid 1px red;
+  border: solid 1px blue;
   flex: 1;
   height: 100%;
 }
 .container .wrapper .card .left-info #pokemon-img {
   border: solid 1px red;
   width: 90%;
+}
+.container .wrapper .card .left-info #pokemon-name {
+  font-weight: bolder;
 }
 .container .wrapper .card .right-info {
   border: solid 1px red;

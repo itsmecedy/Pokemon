@@ -21,14 +21,13 @@ async function fetchData() {
     const data = await response.json();
     const pokemonSprite = data.sprites.front_default;
     const imgElement = document.getElementById("pokemonSprite");
-
+    console.log(data);
     imgElement.src = pokemonSprite;
     imgElement.style.display = "block";
   } catch (error) {
     console.error(error);
   }
 }
-
 // https://www.pinterest.com/pin/battlestationz--117515871522994495/
 // fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
 //   .then((response) => {
@@ -40,3 +39,31 @@ async function fetchData() {
 //   .then((data) => console.log(data))
 //   .catch((error) => console.log(error));
 //   image.png
+
+
+
+
+// const pokemonSearchName = document
+// .getElementById("pokemonSearchName")
+// .value.toLowerCase();
+// const response = await fetch(
+// `https://pokeapi.co/api/v2/pokemon/${pokemonSearchName}`
+// );
+
+// if (!response.ok) {
+// throw new Error("Could not fetch resource");
+// }
+
+// const data = await response.json();
+// //get and display image
+// const pokemonSprite = data.sprites.front_default;
+// const imgElement = document.getElementById("pokemonSprite");
+// imgElement.src = pokemonSprite;
+
+// const pokemonName = data.name;
+// const nameElement = document.getElementById("pokemonName");
+// nameElement.innerText = pokemonName;
+
+// const pokemonId = data.id;
+// const idElement = document.getElementById("pokemonId");
+// idElement.innerText = pokemonId;

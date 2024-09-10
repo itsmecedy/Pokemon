@@ -22,12 +22,12 @@
         <img class="logo" src="./assests/pokedex_logo.png" alt="pokedex_logo" />
         <div class="search-bar">
           <input
-            id="Search"
+            id="pokemonName"
             name="Search"
             type="search"
             placeholder="Search Pokemon..."
           />
-          <button id="search-button">
+          <button id="searchButton" onclick="fetchData()">
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
@@ -38,8 +38,8 @@
         <div class="card">
           <div class="left-info">
             <img id="pokemon-img" src="./assests/ditto.png" alt="ditto.png" />
-            <p>pokemonName</p>
-            <p>pokemon number</p>
+            <p id="pokemon-name">Charmander</p>
+            <p id="pokemon-id">1000</p>
           </div>
           <div class="right-info">more details</div>
         </div>

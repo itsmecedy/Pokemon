@@ -127,19 +127,22 @@ nav {
       margin: 0 auto;
       gap: 1rem;
       .left-info {
-        border: solid 1px red;
+        border: solid 1px blue;
         flex: 1;
         height: 100%;
-        #pokemon-img{
+        #pokemon-img {
           border: solid 1px red;
           width: 90%;
-
+        }
+        #pokemon-name {
+          font-weight: bolder;
+        }
+        #pokemon-id {
         }
       }
       .right-info {
         border: solid 1px red;
         flex: 1;
-
       }
     }
   }
