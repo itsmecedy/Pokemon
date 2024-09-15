@@ -8,7 +8,7 @@
   --blue: #3b4cca;
   --yellow: #ffde00;
   --dark-yellow: #b3a125;
-  --light-gray: #dcdcdc;
+  --light-gray: #cccccc;
 }
 
 * {
@@ -123,31 +123,38 @@ nav .wrapper .search-bar #searchButton :hover {
 }
 .container .wrapper .card {
   width: 70%; /* Adjust width as needed */
-  background-color: #f0f0f0; /* will delete later just for contrast */
+  background-color: var(--light-gray); /* For contrast */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch; /* Ensures children are stretched to the same height */
   text-align: center;
   margin: 0 auto;
   gap: 1rem;
   height: 100%;
+  padding: 1rem;
+}
+.container .wrapper .card .left-info,
+.container .wrapper .card .right-info {
+  flex: 1; /* Ensure equal width */
+  display: flex;
+  flex-direction: column; /* Stacks content vertically */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 .container .wrapper .card .left-info {
-  flex: 1;
-  height: 100%;
   background-color: var(--yellow);
-  padding: 2rem 1rem 2rem 1rem;
+  padding: 2rem 1rem;
   overflow: hidden;
   border-radius: 20px;
+  box-sizing: border-box; /* Include padding and border in height calculations */
 }
 .container .wrapper .card .left-info #pokemon-img {
   border: solid 3px;
   width: 100%;
   margin-bottom: 0.5rem;
   border-radius: 18px;
-  background-color: #dcdcdc; /* A light gray, lighter than #f0f0f0 */
+  background-color: #dcdcdc; /* A light gray */
 }
 .container .wrapper .card .left-info #pokemon-name {
   font-weight: bolder;
@@ -160,30 +167,32 @@ nav .wrapper .search-bar #searchButton :hover {
   margin-bottom: 0.5rem;
 }
 .container .wrapper .card .right-info {
-  border: solid 1px red;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   padding: 20px;
   width: 100%;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Include padding and border in height calculations */
+  display: flex;
+  justify-content: center;
+  background-color: var(--blue);
+  border-radius: 20px;
 }
-.container .wrapper .card #basic-stats,
-.container .wrapper .card #combat-stats {
-  border: solid 1px black;
+.container .wrapper .card .right-info #basic-stats,
+.container .wrapper .card .right-info #combat-stats {
+  border: solid 3px black;
+  border-radius: 18px;
   padding: 10px;
   margin-bottom: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
   gap: 10px;
+  background-color: var(--light-gray);
 }
-.container .wrapper .card #basic-stats h3,
-.container .wrapper .card #combat-stats h3 {
+.container .wrapper .card .right-info h3 {
   grid-column: span 2;
   text-align: center;
   margin: 0 0 10px;
+  padding: 10px 0;
 }
-.container .wrapper .card #basic-stats p,
-.container .wrapper .card #combat-stats p {
-  margin: 0;
+.container .wrapper .card .right-info p {
+  margin: 1rem;
+  text-align: left;
 }/*# sourceMappingURL=index.css.map */
