@@ -2,11 +2,21 @@
   font-family: "PKMN RBYGSC";
   src: url("../font/PKMN\ RBYGSC.ttf");
 }
+:root {
+  --red: #ff0000;
+  --dark-red: #cc0000;
+  --blue: #3b4cca;
+  --yellow: #ffde00;
+  --dark-yellow: #b3a125;
+  --light-gray: #dcdcdc;
+}
+
 * {
   margin: 0;
   font-family: "PKMN RBYGSC", sans-serif;
   animation-duration: 1000ms;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 body {
   overflow-y: scroll; /* Always show vertical scrollbar */
@@ -35,7 +45,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: gray;
   border-radius: 5px;
 }
 
@@ -72,19 +82,19 @@ nav {
       padding: 0.5rem 1rem;
       border-radius: 20px;
       font-size: large;
-      #Search {
+      #inputName {
         outline: none;
         border: none;
         font-weight: bolder;
         letter-spacing: 0.05rem;
-        font-size: large;
+        font-size: medium;
         text-transform: capitalize;
         background: white;
       }
       #Search::-webkit-search-cancel-button {
         position: relative;
       }
-      #search-button {
+      #searchButton {
         outline: none;
         border: none;
         font-weight: bolder;
@@ -99,7 +109,6 @@ nav {
 }
 
 .container {
-  background-color: aqua;
   border: solid 1px red;
   margin: 0;
   height: 100vh;
@@ -116,8 +125,8 @@ nav {
     border: solid 1px blue;
     .card {
       width: 70%; /* Adjust width as needed */
-      height: 40rem; /* Adjust height as needed */
-      background-color: #f0f0f0;
+      background-color: #f0f0f0; /* will delete later just for contrast */
+
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       display: flex;
@@ -126,23 +135,63 @@ nav {
       text-align: center;
       margin: 0 auto;
       gap: 1rem;
+      height: 100%;
       .left-info {
-        border: solid 1px blue;
         flex: 1;
         height: 100%;
+        background-color: var(--yellow);
+        padding: 2rem 1rem 2rem 1rem;
+        overflow: hidden;
+        border-radius: 20px;
+
         #pokemon-img {
-          border: solid 1px red;
-          width: 90%;
+          border: solid 3px;
+          width: 100%;
+          margin-bottom: 0.5rem;
+          border-radius: 18px;
+          background-color: #dcdcdc; /* A light gray, lighter than #f0f0f0 */
         }
         #pokemon-name {
           font-weight: bolder;
+          font-size: large;
+          margin-bottom: 0.5rem;
         }
         #pokemon-id {
+          font-weight: bolder;
+          font-size: large;
+          margin-bottom: 0.5rem;
         }
       }
       .right-info {
         border: solid 1px red;
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box; // Ensure padding is included in width
+      }
+
+      #basic-stats,
+      #combat-stats {
+        border: solid 1px black;
+        padding: 10px;
+        margin-bottom: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr; // Two equal columns
+        gap: 10px; // Space between columns
+      }
+
+      #basic-stats h3,
+      #combat-stats h3 {
+        grid-column: span 2; // Make the header span across both columns
+        text-align: center; // Center the header text
+        margin: 0 0 10px; // Add margin below the header
+      }
+
+      #basic-stats p,
+      #combat-stats p {
+        margin: 0; // Remove default margins to align nicely in grid
       }
     }
   }

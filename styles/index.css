@@ -2,12 +2,22 @@
   font-family: "PKMN RBYGSC";
   src: url("../font/PKMN RBYGSC.ttf");
 }
+:root {
+  --red: #ff0000;
+  --dark-red: #cc0000;
+  --blue: #3b4cca;
+  --yellow: #ffde00;
+  --dark-yellow: #b3a125;
+  --light-gray: #dcdcdc;
+}
+
 * {
   margin: 0;
   font-family: "PKMN RBYGSC", sans-serif;
   -webkit-animation-duration: 1000ms;
           animation-duration: 1000ms;
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
@@ -40,7 +50,7 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: gray;
   border-radius: 5px;
 }
 
@@ -71,31 +81,30 @@ nav .wrapper .search-bar {
   border-radius: 20px;
   font-size: large;
 }
-nav .wrapper .search-bar #Search {
+nav .wrapper .search-bar #inputName {
   outline: none;
   border: none;
   font-weight: bolder;
   letter-spacing: 0.05rem;
-  font-size: large;
+  font-size: medium;
   text-transform: capitalize;
   background: white;
 }
 nav .wrapper .search-bar #Search::-webkit-search-cancel-button {
   position: relative;
 }
-nav .wrapper .search-bar #search-button {
+nav .wrapper .search-bar #searchButton {
   outline: none;
   border: none;
   font-weight: bolder;
   font-size: large;
   background: white;
 }
-nav .wrapper .search-bar #search-button :hover {
+nav .wrapper .search-bar #searchButton :hover {
   cursor: pointer;
 }
 
 .container {
-  background-color: aqua;
   border: solid 1px red;
   margin: 0;
   height: 100vh;
@@ -114,8 +123,7 @@ nav .wrapper .search-bar #search-button :hover {
 }
 .container .wrapper .card {
   width: 70%; /* Adjust width as needed */
-  height: 40rem; /* Adjust height as needed */
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; /* will delete later just for contrast */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -124,20 +132,58 @@ nav .wrapper .search-bar #search-button :hover {
   text-align: center;
   margin: 0 auto;
   gap: 1rem;
-}
-.container .wrapper .card .left-info {
-  border: solid 1px blue;
-  flex: 1;
   height: 100%;
 }
+.container .wrapper .card .left-info {
+  flex: 1;
+  height: 100%;
+  background-color: var(--yellow);
+  padding: 2rem 1rem 2rem 1rem;
+  overflow: hidden;
+  border-radius: 20px;
+}
 .container .wrapper .card .left-info #pokemon-img {
-  border: solid 1px red;
-  width: 90%;
+  border: solid 3px;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  border-radius: 18px;
+  background-color: #dcdcdc; /* A light gray, lighter than #f0f0f0 */
 }
 .container .wrapper .card .left-info #pokemon-name {
   font-weight: bolder;
+  font-size: large;
+  margin-bottom: 0.5rem;
+}
+.container .wrapper .card .left-info #pokemon-id {
+  font-weight: bolder;
+  font-size: large;
+  margin-bottom: 0.5rem;
 }
 .container .wrapper .card .right-info {
   border: solid 1px red;
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container .wrapper .card #basic-stats,
+.container .wrapper .card #combat-stats {
+  border: solid 1px black;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.container .wrapper .card #basic-stats h3,
+.container .wrapper .card #combat-stats h3 {
+  grid-column: span 2;
+  text-align: center;
+  margin: 0 0 10px;
+}
+.container .wrapper .card #basic-stats p,
+.container .wrapper .card #combat-stats p {
+  margin: 0;
 }/*# sourceMappingURL=index.css.map */
