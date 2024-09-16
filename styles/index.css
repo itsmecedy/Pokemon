@@ -106,7 +106,6 @@ nav .wrapper .search-bar #searchButton :hover {
 }
 
 .container {
-  border: solid 1px red;
   margin: 0;
   height: 100vh;
   display: flex;
@@ -120,12 +119,11 @@ nav .wrapper .search-bar #searchButton :hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px blue;
 }
 .container .wrapper .card {
   width: 70%; /* Adjust width as needed */
   background-color: var(--light-gray);
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
