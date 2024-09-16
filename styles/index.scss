@@ -140,22 +140,25 @@ nav {
         overflow: hidden;
         border-radius: 20px;
         box-sizing: border-box;
-        #pokemon-img {
+        #pokemonImg {
           border: solid 3px;
           width: 100%;
           margin-bottom: 0.5rem;
           border-radius: 18px;
           background-color: var(--white);
         }
-        #pokemon-name {
+        #pokemonName {
           font-weight: bolder;
           font-size: large;
           margin-bottom: 0.5rem;
         }
-        #pokemon-id {
+        .pokemonId {
           font-weight: bolder;
           font-size: large;
           margin-bottom: 0.5rem;
+          #pokemonId {
+            padding-left: 0.3rem;
+          }
         }
       }
 

@@ -147,22 +147,25 @@ nav .wrapper .search-bar #searchButton :hover {
   border-radius: 20px;
   box-sizing: border-box;
 }
-.container .wrapper .card .left-info #pokemon-img {
+.container .wrapper .card .left-info #pokemonImg {
   border: solid 3px;
   width: 100%;
   margin-bottom: 0.5rem;
   border-radius: 18px;
   background-color: var(--white);
 }
-.container .wrapper .card .left-info #pokemon-name {
+.container .wrapper .card .left-info #pokemonName {
   font-weight: bolder;
   font-size: large;
   margin-bottom: 0.5rem;
 }
-.container .wrapper .card .left-info #pokemon-id {
+.container .wrapper .card .left-info .pokemonId {
   font-weight: bolder;
   font-size: large;
   margin-bottom: 0.5rem;
+}
+.container .wrapper .card .left-info .pokemonId #pokemonId {
+  padding-left: 0.3rem;
 }
 .container .wrapper .card .right-info {
   padding: 20px;
