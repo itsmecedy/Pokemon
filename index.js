@@ -35,25 +35,48 @@ async function fetchData() {
     height.innerText = pokeHeight;
     // Extract and display abilities
     const abilities = data.abilities
-      .map(
-        (abilityInfo) =>
-          `${abilityInfo.ability.name}${
-            abilityInfo.is_hidden ? " (Hidden)" : ""
-          }`
-      )
+      .map((abilityInfo) => `${abilityInfo.ability.name}`)
       .join(", ");
     document.getElementById("abilities").innerText = abilities;
-
     // Extract and display types
     const types = data.types.map((typeInfo) => typeInfo.type.name).join(", ");
     document.getElementById("types").innerText = types;
+
+    // --------combat stats-------
+
+    //pokemon hp
+    const hpStat = data.stats[0].base_stat;
+    const hpElement = document.getElementById("hp");
+    hpElement.innerText = hpStat;
+    //pokemon attack
+    const attackStat = data.stats[1].base_stat;
+    const attackElement = document.getElementById("attack");
+    attackElement.innerText = attackStat;
+    //pokemon defense
+    const defenseStat = data.stats[2].base_stat;
+    const defenseElement = document.getElementById("defense");
+    defenseElement.innerText = defenseStat;
+    //pokemon specialAttack
+    const specialAttackStat = data.stats[3].base_stat;
+    const specialAttackElement = document.getElementById("specialAttack");
+    specialAttackElement.innerText = specialAttackStat;
+    //pokemon specialDefense
+    const specialDefenseStat = data.stats[4].base_stat;
+    const specialDefenseElement = document.getElementById("specialDefense");
+    specialDefenseElement.innerText = specialDefenseStat;
+    //pokemon speed
+    const speedStat = data.stats[5].base_stat;
+    const speedElement = document.getElementById("speed");
+    speedElement.innerText = speedStat;
   } catch (error) {
     console.error(error);
   }
 }
 // Add event listener to input field to trigger fetchData on Enter key press
-document.getElementById("inputName").addEventListener("keypress", function(event) {
-  if (event.key === "Enter") {
-    fetchData();
-  }
-});
+document
+  .getElementById("inputName")
+  .addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+      fetchData();
+    }
+  });
