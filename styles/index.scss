@@ -66,8 +66,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
     .logo {
-      height: 6rem;
+      height: 5rem;
     }
     .search-bar {
       background: white;
@@ -114,7 +115,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     .card {
-      width: 70%; /* Adjust width as needed */
+      max-width: 70%; /* Adjust width as needed */
       background-color: var(--light-gray);
       border-radius: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -136,13 +137,14 @@ nav {
 
       .left-info {
         background-color: var(--yellow);
-        padding: 2rem 1rem;
+        padding: 1rem;
         overflow: hidden;
         border-radius: 20px;
         box-sizing: border-box;
         #pokemonImg {
           border: solid 3px;
           width: 100%;
+          height: auto;
           margin-bottom: 0.5rem;
           border-radius: 18px;
           background-color: var(--white);
@@ -163,7 +165,7 @@ nav {
       }
 
       .right-info {
-        padding: 20px;
+        padding: 1rem;
         width: 100%;
         box-sizing: border-box;
         display: flex;
@@ -193,6 +195,50 @@ nav {
         p {
           margin: 1rem;
           text-align: left;
+        }
+      }
+    }
+  }
+}
+
+// Mobile view ----------------------------------------
+
+.wrapper {
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
+}
+
+.container {
+  @media (max-width: 1024px) {
+    height: auto;
+  }
+  .wrapper {
+    @media (max-width: 1024px) {
+      margin-top: 8rem;
+    }
+    .card {
+      @media (max-width: 1024px) {
+        flex-direction: column; // Mobile
+        width: 60%;
+      }
+      #basic-stats,
+      #combat-stats {
+        @media (max-width: 1024px) {
+          display: flex;
+          padding: 0;
+        }
+        h3 {
+          @media (max-width: 1024px) {
+            margin: 0 0 10px;
+            padding: 10px 0;
+          }
+        }
+        p {
+          @media (max-width: 1024px) {
+            margin: 0.3rem;
+            padding: 0;
+          }
         }
       }
     }

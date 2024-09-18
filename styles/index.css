@@ -72,9 +72,10 @@ nav .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
 }
 nav .wrapper .logo {
-  height: 6rem;
+  height: 5rem;
 }
 nav .wrapper .search-bar {
   background: white;
@@ -121,7 +122,7 @@ nav .wrapper .search-bar #searchButton :hover {
   align-items: center;
 }
 .container .wrapper .card {
-  width: 70%; /* Adjust width as needed */
+  max-width: 70%; /* Adjust width as needed */
   background-color: var(--light-gray);
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -142,7 +143,7 @@ nav .wrapper .search-bar #searchButton :hover {
 }
 .container .wrapper .card .left-info {
   background-color: var(--yellow);
-  padding: 2rem 1rem;
+  padding: 1rem;
   overflow: hidden;
   border-radius: 20px;
   box-sizing: border-box;
@@ -150,6 +151,7 @@ nav .wrapper .search-bar #searchButton :hover {
 .container .wrapper .card .left-info #pokemonImg {
   border: solid 3px;
   width: 100%;
+  height: auto;
   margin-bottom: 0.5rem;
   border-radius: 18px;
   background-color: var(--white);
@@ -168,7 +170,7 @@ nav .wrapper .search-bar #searchButton :hover {
   padding-left: 0.3rem;
 }
 .container .wrapper .card .right-info {
-  padding: 20px;
+  padding: 1rem;
   width: 100%;
   box-sizing: border-box;
   display: flex;
@@ -196,4 +198,48 @@ nav .wrapper .search-bar #searchButton :hover {
 .container .wrapper .card .right-info p {
   margin: 1rem;
   text-align: left;
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .container .wrapper {
+    margin-top: 8rem;
+  }
+}
+@media (max-width: 1024px) {
+  .container .wrapper .card {
+    flex-direction: column;
+    width: 60%;
+  }
+}
+@media (max-width: 1024px) {
+  .container .wrapper .card #basic-stats,
+.container .wrapper .card #combat-stats {
+    display: flex;
+    padding: 0;
+  }
+}
+@media (max-width: 1024px) {
+  .container .wrapper .card #basic-stats h3,
+.container .wrapper .card #combat-stats h3 {
+    margin: 0 0 10px;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 1024px) {
+  .container .wrapper .card #basic-stats p,
+.container .wrapper .card #combat-stats p {
+    margin: 0.3rem;
+    padding: 0;
+  }
 }/*# sourceMappingURL=index.css.map */
