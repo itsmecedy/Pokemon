@@ -201,8 +201,8 @@ nav .wrapper .search-bar #searchButton :hover {
 }
 
 @media (max-width: 1024px) {
-  .wrapper {
-    flex-direction: column;
+  nav .search-bar {
+    display: none;
   }
 }
 
@@ -219,7 +219,7 @@ nav .wrapper .search-bar #searchButton :hover {
 @media (max-width: 1024px) {
   .container .wrapper .card {
     flex-direction: column;
-    width: 60%;
+    width: 50%;
   }
 }
 @media (max-width: 1024px) {
@@ -227,13 +227,14 @@ nav .wrapper .search-bar #searchButton :hover {
 .container .wrapper .card #combat-stats {
     display: flex;
     padding: 0;
+    margin: 0;
   }
 }
 @media (max-width: 1024px) {
   .container .wrapper .card #basic-stats h3,
 .container .wrapper .card #combat-stats h3 {
-    margin: 0 0 10px;
-    padding: 10px 0;
+    margin: 0;
+    padding: 0;
   }
 }
 @media (max-width: 1024px) {

@@ -202,10 +202,11 @@ nav {
 }
 
 // Mobile view ----------------------------------------
-
-.wrapper {
-  @media (max-width: 1024px) {
-    flex-direction: column;
+nav {
+  .search-bar {
+    @media (max-width: 1024px) {
+      display: none;
+    }
   }
 }
 
@@ -220,18 +221,19 @@ nav {
     .card {
       @media (max-width: 1024px) {
         flex-direction: column; // Mobile
-        width: 60%;
+        width: 50%;
       }
       #basic-stats,
       #combat-stats {
         @media (max-width: 1024px) {
           display: flex;
           padding: 0;
+          margin: 0;
         }
         h3 {
           @media (max-width: 1024px) {
-            margin: 0 0 10px;
-            padding: 10px 0;
+            margin: 0;
+            padding: 0;
           }
         }
         p {
