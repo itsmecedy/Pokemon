@@ -115,7 +115,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     .card {
-      max-width: 70%; /* Adjust width as needed */
+      width: 70%; /* Adjust width as needed */
       background-color: var(--light-gray);
       border-radius: 20px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -221,8 +221,18 @@ nav {
     .card {
       @media (max-width: 1024px) {
         flex-direction: column; // Mobile
-        width: 50%;
+        width: 70%;
       }
+      // @media (max-width: 600px) {
+      //   flex-direction: column; // Mobile
+      //   width: 90%;
+      // }
+      // .left-info{
+      //   #pokemonImg{
+      //     width: 70%;
+      //   }
+      // }
+
       #basic-stats,
       #combat-stats {
         @media (max-width: 1024px) {
